@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог Барбершоп</title>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <!-- Для центровки -->
+      <div class="container">
+        <div class="logo">
+          <!-- [Исправить] Задать авдрес лого-картинки, размеры -->
+          <img src="#" width="150" height="50" alt="">
+        </div>
+
+        <nav class="main-menu">
+          <ul>
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Новости</a>
+            </li>
+            <li>
+              <a href="#">Прайс-лист</a>
+            </li>
+            <li>
+              <a href="#">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты<a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="user-info">
+          <a class="login" href="#">Вход</a>
+        </div>
+      </div>
+    </header>
+    <!-- Для центровки -->
+    <main class="container">
+      <h1>Средства для ухода</h1>
+
+      <ul class="breadcrumbs">
+        <li>
+          <a href="#">Главная</a>
+        </li>
+        <li>
+          <a href="#">Магазин</a>
+        </li>
+        <li>
+          <a class="current" href="#">Средства для ухода</a>
+        </li>
+      </ul>
+
+      <aside>
+        <form action="#url" method="get">
+          <fieldset class="filter">
+            <legend>Производители:</legend>
+
+            <label for="check-baxter">Baxter of california</label>
+            <input type="checkbox" name="baxter" id="check-baxter" checked>
+
+            <label for="check-natty">Mr natty</label>
+            <input type="checkbox" name="natty" id="check-natty">
+
+            <label for="check-suavecito">Suavecito</label>
+            <input type="checkbox" name="suavecito" id="check-suavecito" checked>
+
+            <label for="check-malin">Malin+goez</label>
+            <input type="checkbox" name="malin" id="check-malin">
+
+            <label for="check-murray">Murray's</label>
+            <input type="checkbox" name="murray" id="check-murray">
+
+            <label for="check-acrew">American crew</label>
+            <input type="checkbox" name="acrew" id="check-acrew" checked>
+          </fieldset>
+
+          <fieldset class="filter">
+            <legend>группы товаров:</legend>
+
+            <label for="razor">Бритвенные принадлежности</label>
+            <input type="radio" name="product-item" id="razor">
+
+            <label for="care">Средства для ухода</label>
+            <input type="radio" name="product-item" id="care" checked>
+
+            <label for="accessories">Аксессуары</label>
+            <input type="radio" name="product-item" id="accessories">
+          </fieldset>
+          <button class="btn btn-filter" type="submit" value="Показать">
+        </form>
+      </aside>
+      <!--[Вопрос] вложенность article в article норм? есть сомнения, что что-то не то -->
+      <article>
+        <article class="product">
+          <figure class="product-img">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+          </figure>
+          <p class="product-name">Набор для путешествий "Baxter of california"</p>
+          <p class="product-price">2 900 руб.</p>
+          <!-- [Вопрос] не понимаю почему здесь ссылка, а не кнопка?? по логике при нажатии в
+          корзину добавляется товар и продолжаем выбирать дальше, а если ссылка то
+          должна открываться новая стр. Не? -->
+          <a class="btn btn-add-to-cart" href="#">Купить</a>
+        </article>
+
+        <article class="product">
+          <figure class="product-img">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+          </figure>
+          <p class="product-name">Увлажняющий кондиционер "Baxter of california"</p>
+          <p class="product-price">750 руб.</p>
+          <a class="btn btn-add-to-cart" href="#">Купить</a>
+        </article>
+
+        <article class="product">
+          <figure class="product-img">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+          </figure>
+          <p class="product-name">Гель для волос "Suavecito"</p>
+          <p class="product-price">290 руб.</p>
+          <a class="btn btn-add-to-cart" href="#">Купить</a>
+        </article>
+
+        <article class="product">
+          <figure class="product-img">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+          </figure>
+          <p class="product-name">Глина для укладки волос "American crew"</p>
+          <p class="product-price">500 руб.</p>
+          <a class="btn btn-add-to-cart" href="#">Купить</a>
+        </article>
+
+        <article class="product">
+          <figure class="product-img">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+          </figure>
+          <p class="product-name">Гель для волос "American crew"</p>
+          <p class="product-price">300 руб.</p>
+          <a class="btn btn-add-to-cart" href="#">Купить</a>
+        </article>
+
+        <article class="product">
+          <figure class="product-img">
+            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+          </figure>
+          <p class="product-name">Набор для бритья "Baxter of california"</p>
+          <p class="product-price">3 900 руб.</p>
+          <a class="btn btn-add-to-cart" href="#">Купить</a>
+        </article>
+
+        <footer class="catalog-footer">
+          <a class="panagination" href="#">1</a>
+          <!-- [Вопрос] Нужно указывать второй класс для активного эл-та или это как то
+          по другому реализуется, псевдоклассами??-->
+          <a class="panagination page-active" href="#">2</a>
+          <a class="panagination" href="#">3</a>
+          <a class="panagination" href="#">4</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <section class="contacts">
+          Барбершоп "Бородинский"<br>
+          Адрес: г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8<br>
+          <a href="#">Как нас найти?</a><br>
+          Телефон: +7(495)666-02-66
+        </section>
+
+        <section class="social">
+          <p>Давайте дружить!</p>
+          <a class="btn-social btn-social-vk" href="#">Вконтакте</a>
+          <a class="btn-social btn-social-fb" href="#">Фейсбук</a>
+          <a class="btn-social btn-social-inst" href="#">Инстаграм</a>
+        </section>
+
+        <section class="copyright">
+          <p>Разработано</p>
+          <a class="btn" href="#">Htmlacademy.ru</a>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
