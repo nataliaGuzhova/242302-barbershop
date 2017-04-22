@@ -9,12 +9,12 @@
     <header class="page-header">
       <!-- Для центровки -->
       <div class="container">
-        <div class="logo">
-          <!-- [Исправить] Задать авдрес лого-картинки, размеры -->
-          <img src="#" width="150" height="50" alt="">
-        </div>
-
         <nav class="main-menu">
+          <div class="logo">
+            <!-- [Исправить] Задать авдрес лого-картинки, размеры -->
+            <img src="#" width="150" height="50" alt="">
+          </div>
+
           <ul>
             <li>
               <a href="#">Информация</a>
@@ -26,7 +26,8 @@
               <a href="#">Прайс-лист</a>
             </li>
             <li>
-              <a href="#">Магазин</a>
+              <!-- Не ссылка-заглушка -->
+              <a class="active-menu-item">Магазин</a>
             </li>
             <li>
               <a href="#">Контакты</a>
@@ -51,7 +52,8 @@
           <a href="#">Магазин</a>
         </li>
         <li>
-          <a class="current" href="#">Средства для ухода</a>
+          <!-- Без адреса, т.к. заглушка -->
+          <a class="current">Средства для ухода</a>
         </li>
       </ul>
 
@@ -59,109 +61,196 @@
         <form action="#url" method="get">
           <fieldset class="filter">
             <legend>Производители:</legend>
+            <!-- p - чтоб проще стилизовать -->
+            <p>
+              <label for="check-baxter">Baxter of california</label>
+              <input type="checkbox" name="baxter" id="check-baxter" checked>
+            </p>
 
-            <label for="check-baxter">Baxter of california</label>
-            <input type="checkbox" name="baxter" id="check-baxter" checked>
+            <p>
+              <label for="check-natty">Mr natty</label>
+              <input type="checkbox" name="natty" id="check-natty">
+            </p>
 
-            <label for="check-natty">Mr natty</label>
-            <input type="checkbox" name="natty" id="check-natty">
+            <p>
+              <label for="check-suavecito">Suavecito</label>
+              <input type="checkbox" name="suavecito" id="check-suavecito" checked>
+            </p>
 
-            <label for="check-suavecito">Suavecito</label>
-            <input type="checkbox" name="suavecito" id="check-suavecito" checked>
+            <p>
+              <label for="check-malin">Malin+goez</label>
+              <input type="checkbox" name="malin" id="check-malin">
+            </p>
 
-            <label for="check-malin">Malin+goez</label>
-            <input type="checkbox" name="malin" id="check-malin">
+            <p>
+              <label for="check-murray">Murray's</label>
+              <input type="checkbox" name="murray" id="check-murray">
+            </p>
 
-            <label for="check-murray">Murray's</label>
-            <input type="checkbox" name="murray" id="check-murray">
-
-            <label for="check-acrew">American crew</label>
-            <input type="checkbox" name="acrew" id="check-acrew" checked>
+            <p>
+              <label for="check-acrew">American crew</label>
+              <input type="checkbox" name="acrew" id="check-acrew" checked>
+            </p>
           </fieldset>
 
           <fieldset class="filter">
             <legend>группы товаров:</legend>
 
-            <label for="razor">Бритвенные принадлежности</label>
-            <input type="radio" name="product-item" id="razor">
+            <p>
+              <label for="razor">Бритвенные принадлежности</label>
+              <input type="radio" name="product-item" id="razor">
+            </p>
 
-            <label for="care">Средства для ухода</label>
-            <input type="radio" name="product-item" id="care" checked>
+            <p>
+              <label for="care">Средства для ухода</label>
+              <input type="radio" name="product-item" id="care" checked>
+            </p>
 
-            <label for="accessories">Аксессуары</label>
-            <input type="radio" name="product-item" id="accessories">
+            <p>
+              <label for="accessories">Аксессуары</label>
+              <input type="radio" name="product-item" id="accessories">
+            </p>
           </fieldset>
           <button class="btn btn-filter" type="submit">Показать</button>
         </form>
       </aside>
-      <!--[Вопрос] вложенность article в article норм? есть сомнения, что что-то не то -->
-      <article>
+      <!-- div т.к. нужен для только стилизации?... -->
+      <div>
         <article class="product">
-          <figure class="product-img">
-            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
-          </figure>
-          <p class="product-name">Набор для путешествий "Baxter of california"</p>
-          <p class="product-price">2 900 руб.</p>
-          <!-- [Вопрос] не понимаю почему здесь ссылка, а не кнопка?? по логике при нажатии в
-          корзину добавляется товар и продолжаем выбирать дальше, а если ссылка то
-          должна открываться новая стр. Не? -->
-          <a class="btn btn-add-to-cart" href="#">Купить</a>
+          <div class="product-img">
+            <a href="#">
+              <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+            </a>
+          </div>
+
+          <h2>
+            <a href="#">
+              <span class="product-category">Набор для путешествий</span>
+              <span class="product-name"> "Baxter of california"</span>
+            </a>
+          </h2>
+
+          <div class="product-price">
+            <span class="price">2 900 руб.</span>
+            <a class="btn btn-add-to-cart" href="#">Купить</a>
+          </div>
         </article>
 
         <article class="product">
-          <figure class="product-img">
-            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
-          </figure>
-          <p class="product-name">Увлажняющий кондиционер "Baxter of california"</p>
-          <p class="product-price">750 руб.</p>
-          <a class="btn btn-add-to-cart" href="#">Купить</a>
+          <div class="product-img">
+            <a>
+              <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+            </a>
+          </div>
+
+          <h2>
+            <a href="#">
+              <span class="product-category">Увлажняющий кондиционер</span>
+              <span class="product-name">"Baxter of california"</span>
+            </a>
+          </h2>
+
+          <div class="product-price">
+            <span class="price">750 руб.</span>
+            <a class="btn btn-add-to-cart" href="#">Купить</a>
+          </div>
         </article>
 
         <article class="product">
-          <figure class="product-img">
-            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
-          </figure>
-          <p class="product-name">Гель для волос "Suavecito"</p>
-          <p class="product-price">290 руб.</p>
-          <a class="btn btn-add-to-cart" href="#">Купить</a>
+          <div class="product-img">
+            <a href="#">
+              <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+            </a>
+          </div>
+
+          <h2>
+            <a href="#">
+              <span class="product-category">Гель для волос</span>
+              <span class="product-name">"Suavecito"</span>
+            </a>
+          </h2>
+
+          <div class="product-price">
+            <span class="price">290 руб.</span>
+            <a class="btn btn-add-to-cart" href="#">Купить</a>
+          </div>
         </article>
 
         <article class="product">
-          <figure class="product-img">
-            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
-          </figure>
-          <p class="product-name">Глина для укладки волос "American crew"</p>
-          <p class="product-price">500 руб.</p>
-          <a class="btn btn-add-to-cart" href="#">Купить</a>
+          <div class="product-img">
+            <a href="#">
+              <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+            </a>
+          </div>
+
+          <h2>
+            <a href="#">
+              <span class="product-category">Глина для укладки волос</span>
+              <span class="product-name">"American crew"</span>
+            </a>
+          </h2>
+
+          <div class="product-price">
+            <span class="price">500 руб.</span>
+            <a class="btn btn-add-to-cart" href="#">Купить</a>
+          </div>
         </article>
 
         <article class="product">
-          <figure class="product-img">
-            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
-          </figure>
-          <p class="product-name">Гель для волос "American crew"</p>
-          <p class="product-price">300 руб.</p>
-          <a class="btn btn-add-to-cart" href="#">Купить</a>
+          <div class="product-img">
+            <a href="#">
+              <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+            </a>
+          </div>
+
+          <h2>
+            <a href="#">
+              <span class="product-category">Гель для волос</span>
+              <span class="product-name">"American crew"</span>
+            </a>
+          </h2>
+
+          <div class="product-price">
+            <span class="price">300 руб.</span>
+            <a class="btn btn-add-to-cart" href="#">Купить</a>
+          </div>
         </article>
 
         <article class="product">
-          <figure class="product-img">
-            <img src="http://placehold.it/150x100" width="150" height="100" alt="">
-          </figure>
-          <p class="product-name">Набор для бритья "Baxter of california"</p>
-          <p class="product-price">3 900 руб.</p>
-          <a class="btn btn-add-to-cart" href="#">Купить</a>
+          <div class="product-img">
+            <a href="#">
+              <img src="http://placehold.it/150x100" width="150" height="100" alt="">
+            </a>
+          </div>
+
+          <h2>
+            <a href="#">
+              <span class="product-category">Набор для бритья</span>
+              <span class="product-name">"Baxter of california"</span>
+            </a>
+          </h2>
+
+          <div class="product-price">
+            <span class="price">3 900 руб.</span>
+            <a class="btn btn-add-to-cart" href="#">Купить</a>
+          </div>
         </article>
 
-        <footer class="catalog-footer">
-          <a class="pagination" href="#">1</a>
-          <!-- [Вопрос] Нужно указывать второй класс для активного эл-та или это как то
-          по другому реализуется, псевдоклассами??-->
-          <a class="pagination page-active" href="#">2</a>
-          <a class="pagination" href="#">3</a>
-          <a class="pagination" href="#">4</a>
-        </footer>
-      </article>
+        <ul class="pagination">
+          <li>
+            <a class="btn-pagination" href="#">1</a>
+          </li>
+          <li>
+            <a class="btn-pagination page-active">2</a>
+          </li>
+          <li>
+            <a class="btn-pagination" href="#">3</a>
+          </li>
+          <li>
+            <a class="btn-pagination" href="#">4</a>
+          </li>
+        </ul>
+      </div>
     </main>
 
     <footer class="page-footer">
